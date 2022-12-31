@@ -34,7 +34,7 @@ const ORGANIZATION_INFO = new Schema({
   },
 });
 
-const ACCEPTED_ORGANIZATION_INFO = new Schema({
+const ACCEPTED_ORGANIZATION_INFO =  new Schema({
   ORGANIZATION_NAME: String,
   ORGANIZATION_TYPE: String,
   ORGANIZATION_CONTACT_PERSON: {
@@ -124,8 +124,8 @@ const StudentSchema = new Schema({
 });
 
 const StudentModel =
-  models.Moderator ||
-  model("students", StudentSchema, "major-project-details");
+  models.Student ||
+  model("student", StudentSchema, "major-project-details");
 
 export default StudentModel;
 

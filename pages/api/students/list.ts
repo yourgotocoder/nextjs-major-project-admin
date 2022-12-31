@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from "../../../lib/mongodb";
-import StudentModel from "../../../models/Student.model";
+import dbConnect from "../../../db/lib/mongodb";
+import StudentModel from "../../../db/models/Student.model";
 // ----------------------------------------------------------------------
 
 export default async function handler(
@@ -9,9 +9,9 @@ export default async function handler(
 ) {
   try {
     dbConnect();
-    const moderators = StudentModel;
+    const students = StudentModel;
 
-    const allUsers = await moderators.find();
+    const allUsers = await students.find();
 
     res.status(200).json({ users: allUsers });
   } catch (error) {

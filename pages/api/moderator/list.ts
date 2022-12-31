@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from "../../../lib/mongodb";
-import ModeratorModel from "../../../models/Moderator.model";
+import dbConnect from "../../../db/lib/mongodb";
+import ModeratorModel from "../../../db/models/Moderator.model";
 
 // ----------------------------------------------------------------------
 
